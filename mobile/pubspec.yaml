@@ -13,7 +13,9 @@ dependencies:
   latlong2: ^0.9.1
   shared_preferences: ^2.3.2
   url_launcher: ^6.3.0
+  http: ^1.6.0
 dev_dependencies:
+  flutter_launcher_icons: ^0.14.4
   flutter_lints: ^6.0.0
   flutter_test:
     sdk: flutter
@@ -21,3 +23,16 @@ flutter:
   uses-material-design: true
   assets:
     - assets/attractions.json
+    - assets/logo.png
+    - assets/stops.json
+    - assets/tours.json
+    - assets/photos.json
+    - assets/photos/
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/icon/icon.png
+  adaptive_icon_background: assets/icon/background.png
+  adaptive_icon_foreground: assets/icon/foreground.png
+  min_sdk_android: 24

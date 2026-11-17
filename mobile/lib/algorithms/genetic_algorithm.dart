@@ -4,7 +4,7 @@ import 'dart:math';
 List<int> geneticTsp(List<List<double>> dm,
     {int pop = 80, int gens = 200, double mut = 0.25, int seed = 42}) {
   final n = dm.length;
-  if (n <= 3) return List.generate(n, (i) => i);
+  if (n <= 2) return List.generate(n, (i) => i);
   final rnd = Random(seed);
   double cost(List<int> r) {
     var s = 0.0;
@@ -12,6 +12,34 @@ List<int> geneticTsp(List<List<double>> dm,
       s += dm[r[i]][r[i + 1]];
     }
     return s;
+  }
+
+  // Kam joy bo'lsa (≤ 8) barcha tartiblarni tekshirib, aniq eng yaxshisini olamiz (7! = 5040 variant).
+  if (n <= 8) {
+    var best = List.generate(n, (i) => i);
+    var bestCost = cost(best);
+    void permute(List<int> r, int k) {
+      if (k == n) {
+        final c = cost(r);
+        if (c < bestCost) {
+          bestCost = c;
+          best = [...r];
+        }
+        return;
+      }
+      for (var i = k; i < n; i++) {
+        var t = r[k];
+        r[k] = r[i];
+        r[i] = t;
+        permute(r, k + 1);
+        t = r[k];
+        r[k] = r[i];
+        r[i] = t;
+      }
+    }
+
+    permute(List.generate(n, (i) => i), 1);
+    return best;
   }
 
   List<int> randomRoute() => [0, ...(List.generate(n - 1, (i) => i + 1)..shuffle(rnd))];

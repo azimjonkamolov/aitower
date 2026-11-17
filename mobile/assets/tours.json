@@ -1,0 +1,148 @@
+[
+ {
+  "id": "shahrisabz_day",
+  "icon": "account_balance",
+  "transport": "walk",
+  "days": 1,
+  "places": [
+   1,
+   8,
+   2,
+   51,
+   3,
+   52,
+   4,
+   5,
+   53,
+   6,
+   32
+  ],
+  "name": {
+   "uz": "Shahrisabz bir kunda",
+   "en": "Shahrisabz in one day",
+   "ru": "Шахрисабз за один день"
+  },
+  "desc": {
+   "uz": "Amir Temur vatani: Oqsaroy, Dorus-Saodat, Dorut-Tilovat va Ko'k Gumbaz – hammasi piyoda, tushlikda osh.",
+   "en": "Amir Timur's home town: Ak-Saray, Dorus-Saodat, Dorut-Tilovat and Kok Gumbaz – all on foot, with plov for lunch.",
+   "ru": "Родина Амира Темура: Ак-Сарай, Дорус-Саодат, Дорут-Тиловат и Кок-Гумбаз — пешком, на обед плов."
+  }
+ },
+ {
+  "id": "ziyorat",
+  "icon": "mosque",
+  "transport": "car",
+  "days": 2,
+  "places": [
+   4,
+   53,
+   52,
+   56,
+   16,
+   41,
+   18,
+   17
+  ],
+  "name": {
+   "uz": "Ziyorat yo'li",
+   "en": "Pilgrimage route",
+   "ru": "Паломнический маршрут"
+  },
+  "desc": {
+   "uz": "Qashqadaryoning muqaddas qadamjolari: Dorut-Tilovat, Tezob ota, Langar ota, Imom Muin an-Nasafiy va Sulton Mir Haydar.",
+   "en": "The region's holy places: Dorut-Tilovat, Tezob Ota, Langar Ota, Imam Muin al-Nasafi and Sultan Mir Haydar.",
+   "ru": "Святыни области: Дорут-Тиловат, Тезоб-ата, Лангар-ата, Имам Муин ан-Насафи и Султан Мир Хайдар."
+  }
+ },
+ {
+  "id": "mountains",
+  "icon": "landscape",
+  "transport": "car",
+  "days": 2,
+  "places": [
+   22,
+   43,
+   42,
+   21
+  ],
+  "name": {
+   "uz": "Tog'lar va sharsharalar",
+   "en": "Mountains and waterfalls",
+   "ru": "Горы и водопады"
+  },
+  "desc": {
+   "uz": "Hisorak suv ombori, 80 metrli Suvtushar sharsharasi, 2336 m balandlikdagi Gilon qishlog'i va Amir Temur g'ori.",
+   "en": "Hisorak reservoir, the 80-metre Suvtushar waterfall, Gilan village at 2,336 m and Amir Timur's cave.",
+   "ru": "Гиссаракское водохранилище, 80-метровый водопад Сувтушар, кишлак Гилан на 2336 м и пещера Амира Темура."
+  }
+ },
+ {
+  "id": "qarshi",
+  "icon": "location_city",
+  "transport": "walk",
+  "days": 1,
+  "places": [
+   9,
+   13,
+   10,
+   11,
+   12,
+   40,
+   50,
+   34
+  ],
+  "name": {
+   "uz": "Qarshi yarim kunda",
+   "en": "Qarshi in half a day",
+   "ru": "Карши за полдня"
+  },
+  "desc": {
+   "uz": "Odina madrasasi (muzey), sardoba, madrasalar, XVI asr Amir Temur ko'prigi va tushlik.",
+   "en": "Odina madrasa (museum), the sardoba, madrasas, the 16th-century Amir Timur bridge and lunch.",
+   "ru": "Медресе Одина (музей), сардоба, медресе, мост Амира Темура XVI века и обед."
+  }
+ },
+ {
+  "id": "astro",
+  "icon": "auto_awesome",
+  "transport": "car",
+  "days": 1,
+  "places": [
+   24,
+   20,
+   39
+  ],
+  "name": {
+   "uz": "Yulduzlar va tog' jinslari",
+   "en": "Stars and stones",
+   "ru": "Звёзды и камни"
+  },
+  "desc": {
+   "uz": "Kitob kenglik stansiyasi, Kitob geologik qo'riqxonasi va kechqurun Maydanak rasadxonasi – astro va geoturizm.",
+   "en": "Kitab latitude station, the Kitab geological reserve and Maidanak observatory in the evening – astro and geo-tourism.",
+   "ru": "Китабская широтная станция, геологический заповедник и вечером обсерватория Майданак — астро- и геотуризм."
+  }
+ },
+ {
+  "id": "nasaf",
+  "icon": "history_edu",
+  "transport": "car",
+  "days": 1,
+  "places": [
+   14,
+   15,
+   41,
+   45
+  ],
+  "name": {
+   "uz": "Qadimiy Nasaf izidan",
+   "en": "Ancient Nasaf",
+   "ru": "По следам древнего Насафа"
+  },
+  "desc": {
+   "uz": "Erqo'rg'on xarobalari, Zahhoki Moron tepaligi, Muin an-Nasafiy majmuasi va arablar yashaydigan Jeynov qishlog'i.",
+   "en": "Erkurgan ruins, Zahhoki Moron hill, the Muin al-Nasafi complex and Jeynov, the Arab village.",
+   "ru": "Руины Еркургана, холм Захоки Морон, комплекс Муина ан-Насафи и арабский кишлак Джейнов."
+  }
+ }
+]

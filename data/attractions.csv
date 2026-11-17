@@ -1,28 +1,57 @@
 name,city,category,tags,lat,lon,rating,visit_minutes,cost_usd,description
-Chorsu bozori,Toshkent,bozor,"bozor,taom,foto",41.3265,69.2347,4.5,90,10,Non va quruq mevalar
-Xast Imom majmuasi,Toshkent,tarix,"tarix,foto",41.3356,69.2400,4.6,60,3,Usmon Qur'oni saqlanadigan joy
-Amir Temur xiyoboni,Toshkent,shahar,"foto,tarix",41.3111,69.2797,4.4,45,0,Shahar markazida sayr
-Toshkent teleminorasi,Toshkent,shahar,"foto,tabiat",41.3416,69.2849,4.3,60,6,Shahar panoramasi
-Milliy plov markazi,Toshkent,taom,taom,41.3490,69.3190,4.5,60,12,Toshkent plovi
-Yodgorlik ipak fabrikasi,Farg'ona vodiysi,hunar,"hunar,tarix",40.4670,71.7240,4.6,90,6,Ipak to'qish jarayoni
-Rishton kulolchiligi,Farg'ona vodiysi,hunar,hunar,40.3573,71.2850,4.7,90,8,Sopol yasash ustaxonasi
-Xudoyorxon o'rdasi,Farg'ona vodiysi,tarix,"tarix,foto",40.5290,70.9420,4.4,60,4,Qo'qon xonligi saroyi
-Registon maydoni,Samarqand,tarix,"tarix,foto",39.6548,66.9757,4.9,90,8,Uch madrasa
-Go'ri Amir maqbarasi,Samarqand,tarix,"tarix,foto",39.6483,66.9689,4.8,60,5,Amir Temur maqbarasi
-Shohizinda majmuasi,Samarqand,tarix,"tarix,foto",39.6637,66.9895,4.8,75,5,Feruza ranglarga to'la ko'cha
-Bibixonim masjidi,Samarqand,tarix,tarix,39.6612,66.9791,4.6,45,5,Temur davri masjidi
-Siyob bozori,Samarqand,bozor,"bozor,taom",39.6620,66.9810,4.5,60,8,Samarqand noni
-Ulug'bek rasadxonasi,Samarqand,tarix,tarix,39.6769,66.9964,4.5,60,4,O'rta asr rasadxonasi
-Konigil qog'oz ustaxonasi,Samarqand,hunar,hunar,39.6370,66.9150,4.4,60,6,Ipak qog'oz yasash
-Poi Kalon majmuasi,Buxoro,tarix,"tarix,foto",39.7753,64.4142,4.9,75,6,Kalon minorasi
-Ark qal'asi,Buxoro,tarix,tarix,39.7766,64.4115,4.6,60,5,Hukmdorlar qarorgohi
-Labi Hovuz,Buxoro,taom,"taom,foto",39.7745,64.4217,4.7,75,10,Hovuz bo'yida ovqat
-Chor Minor,Buxoro,tarix,"foto,tarix",39.7783,64.4261,4.4,30,3,To'rt minorali bino
-Savdo gumbazlari,Buxoro,bozor,"bozor,hunar",39.7742,64.4167,4.5,75,10,Zardo'zi va gilamlar
-Sitorai Mohi Xosa,Buxoro,tarix,tarix,39.8010,64.3960,4.3,60,5,Amir yozgi saroyi
-Ichan Qala sayri,Xiva,tarix,"tarix,foto",41.3783,60.3589,4.9,180,10,Devor ichidagi eski shahar
-Kalta Minor,Xiva,tarix,foto,41.3786,60.3610,4.7,20,0,Feruza kafelli minora
-Juma masjidi,Xiva,tarix,tarix,41.3770,60.3590,4.6,45,3,Yog'och ustunli masjid
-Tosh Hovli saroyi,Xiva,tarix,tarix,41.3775,60.3617,4.5,60,4,Xon saroyi
-Islom Xo'ja minorasi,Xiva,tarix,"foto,tarix",41.3790,60.3625,4.6,40,3,Shahar panoramasi
-Hunarmandlar ko'chasi,Xiva,hunar,"hunar,bozor",41.3780,60.3600,4.4,60,8,Yog'och o'ymakorligi
+Oqsaroy saroyi,shahrisabz,tarix,"tarix,foto,unesco",39.0607,66.8295,4.8,60,2,Amir Temur 1380–1404 yillarda qurdirgan ulkan saroy. Bugun faqat ulkan peshtoq qoldiqlari saqlangan. YUNESKO merosi.
+Dorus-Saodat majmuasi,shahrisabz,tarix,"tarix,ziyorat,unesco",39.0498,66.82999,4.7,45,2,Amir Temur o'g'li Jahongir uchun qurdirgan maqbara majmuasi. YUNESKO merosi.
+Amir Temur sag'anasi,shahrisabz,ziyorat,"ziyorat,tarix",39.04962,66.83038,4.6,20,1,Amir Temur o'zi uchun tayyorlatgan yer osti sag'anasi. Sohibqiron Samarqandda dafn etilgan.
+Dorut-Tilovat majmuasi,shahrisabz,ziyorat,"ziyorat,tarix,unesco",39.04968,66.82756,4.7,45,2,"XIV–XV asr majmuasi: Shamsuddin Kulol va Amir Temurning otasi Amir Tarag'ay maqbaralari, Gumbazi Sayidon."
+Ko'k Gumbaz masjidi,shahrisabz,ziyorat,"ziyorat,tarix,foto",39.04961,66.82721,4.7,30,0,Mirzo Ulug'bek 1435 yilda otasi Shohruh sharafiga qurdirgan ko'k gumbazli juma masjidi.
+Shahrisabz Chorsusi,shahrisabz,tarix,"tarix,bozor,foto",39.0537,66.8269,4.4,30,0,"Tarixiy markazdagi gumbazli savdo binosi, hozir hunarmandlar do'konlari bor."
+Chubin madrasasi,shahrisabz,tarix,tarix,39.0568,66.83022,4.3,30,1,Shahrisabzning tarixiy markazidagi qadimiy madrasa.
+Amir Temur haykali,shahrisabz,tarix,"tarix,foto",39.05878,66.82931,4.6,20,0,Oqsaroy oldidagi Sohibqiron haykali va keng xiyobon.
+Odina masjid-madrasasi,qarshi,tarix,"tarix,muzey",38.8677,65.80331,4.5,45,2,"XVI asr masjid-madrasasi, hozir o'lkashunoslik muzeyi joylashgan."
+Qilichboy madrasasi,qarshi,tarix,"tarix,foto",38.86935,65.80565,4.3,30,1,XX asr boshida qurilgan Qarshining eng yirik madrasalaridan biri.
+Bektemir madrasasi,qarshi,tarix,tarix,38.86856,65.8027,4.3,30,0,Qarshi markazidagi tarixiy madrasa.
+Sharafbek madrasasi,qarshi,tarix,tarix,38.8739,65.80342,4.2,30,0,Eski shahar qismidagi tarixiy madrasa.
+Qarshi sardobasi,qarshi,tarix,"tarix,foto",38.86764,65.80411,4.4,20,0,Qadimiy gumbazli suv ombori – sardoba.
+Erqo'rg'on yodgorligi,qarshi,tarix,"tarix,arxeologiya",38.94901,65.71428,4.5,90,2,"Qadimiy Naxshab (Nasaf) shahri xarobalari, Qarshidan 10 km shimolda."
+Zahhoki Moron tepaligi,qarshi,tarix,"tarix,arxeologiya",38.82078,65.78337,4.1,45,0,Qarshi janubidagi qadimiy shahar qoldiqlari.
+Langar ota majmuasi,qamashi,ziyorat,"ziyorat,tarix,tabiat",38.68157,66.75759,4.8,60,0,"Langar qishlog'idagi maqbara (1520-yillar) va ""Hazrati Langar"" masjidi (1448). Shayx Muhammad Sodiq dafn etilgan; gumbazidagi to'rt shar ilohiy bilimning eng yuqori darajasini anglatadi."
+Sulton Mir Haydar majmuasi,kasbi,ziyorat,"ziyorat,tarix",38.95062,65.38963,4.6,45,0,"Kasbi tumanidagi maqbara, masjid va qadimiy sardoba."
+Qusam ota ziyoratgohi,qarshi,ziyorat,ziyorat,38.98249,65.67056,4.5,30,0,Qarshi tumanidagi qadimiy ziyoratgoh.
+Mirijanda ota ziyoratgohi,guzor,ziyorat,ziyorat,38.60651,66.25225,4.4,30,0,G'uzor tumanidagi ziyoratgoh.
+Kitob geologik qo'riqxonasi,kitob,tabiat,"tabiat,eko,geo,foto",39.17861,67.30997,4.6,180,3,"Zarafshon tizmasining janubi-g'arbidagi milliy tabiat bog'i: 798 tur o'simlik (Zarafshon archasi), 168 tur umurtqali hayvon va Paleozoy davri qatlamlari. Geoturizm."
+Amir Temur g'ori,yakkabog,tabiat,"tabiat,ekstrim,eko,foto",38.7273,67.29711,4.6,180,0,"Hisor tog'laridagi g'or: kirishi 6 m balandlikdagi ravoq, ichida 10 metrli sharsharadan hosil bo'lgan kichik ko'l. Kuchli fonar oling, tashrif 2–3 soat. Ekstrim turizm."
+Hisorak suv ombori,shahrisabz,tabiat,"tabiat,foto,dam,eko",39.01645,67.18796,4.5,180,0,Shahrisabz yaqinidagi tog' orasidagi moviy suv ombori.
+Chimqo'rg'on suv ombori,chiroqchi,tabiat,"tabiat,dam,eko",38.94654,66.38408,4.3,120,0,Qashqadaryo daryosidagi viloyatning yirik suv omborlaridan biri.
+Kitob kenglik stansiyasi,kitob,tarix,"astro,ilm,tarix",39.13514,66.88559,4.3,45,2,"1930-yillarda ochilgan dunyodagi beshta xalqaro kenglik stansiyasidan biri. Zenit-teleskop, bugun esa CCD sensor va GPS bilan kuzatuvlar. Astroturizm."
+Kesh Palace mehmonxonasi,shahrisabz,mehmonxona,mehmonxona,39.05782,66.83642,4.4,30,45,Tarixiy markazga yaqin zamonaviy mehmonxona.
+Dulon mehmon uyi,shahrisabz,mehmonxona,"mehmonxona,tarix",39.0542,66.82286,4.6,30,35,Milliy uslubdagi mehmon uyi va uy-muzey.
+Shahrisabz Yulduzi,shahrisabz,mehmonxona,mehmonxona,39.06355,66.83467,4.2,30,30,Oqsaroy yaqinidagi qulay mehmonxona.
+Nahshab mehmonxonasi,qarshi,mehmonxona,mehmonxona,38.86114,65.79855,4.2,30,40,Qarshi markazidagi mehmonxona.
+Grand Sarbon mehmonxonasi,qarshi,mehmonxona,mehmonxona,38.86846,65.79722,4.3,30,45,Odina madrasasi yaqinidagi mehmonxona.
+Kitob Sayyoh mehmonxonasi,kitob,mehmonxona,mehmonxona,39.12517,66.87845,4.0,30,25,Kitob shahridagi arzon mehmonxona.
+Temurxon restorani,shahrisabz,taom,"taom,gastro",39.04649,66.82041,4.5,60,10,"Milliy va xalqaro taomlar, kecha-kunduz ochiq."
+Shahrisabz osh markazi,shahrisabz,taom,"taom,gastro",39.03847,66.81763,4.5,60,6,Qozonda pishgan mahalliy osh – tushlikda boring.
+Sezam restorani,shahrisabz,taom,"taom,gastro",39.05427,66.8266,4.3,60,8,Tarixiy markazdagi mahalliy taomlar restorani.
+Sardoba restorani,qarshi,taom,"taom,gastro",38.83787,65.78765,4.4,60,8,Qashqadaryo milliy taomlari.
+Mehmon choyxonasi,qarshi,taom,"taom,gastro",38.84874,65.79068,4.3,60,7,"An'anaviy choyxona: osh, shashlik va ko'k choy."
+Qashqadaryo sohil parki,qarshi,dam,"dam,tabiat,eko",38.88652,65.80719,4.4,90,0,Daryo bo'yidagi sayr va dam olish bog'i.
+Nasaf bog'i,qarshi,dam,"dam,tabiat,eko",38.87781,65.74393,4.3,90,0,Qarshidagi yirik shahar bog'i.
+Odina bog'i,qarshi,dam,"dam,foto",38.86862,65.80408,4.2,45,0,Odina madrasasi yonidagi xiyobon.
+Maydanak rasadxonasi,qamashi,tarix,"astro,ilm,tabiat,foto",38.67342,66.89568,4.8,120,5,Ulug'bek nomidagi Astronomiya institutining tog'dagi rasadxonasi. Yiliga 2000 soat tiniq tun – dunyodagi eng yaxshi astroiqlimli joylardan biri. Astroturizm.
+Amir Temur ko'prigi,qarshi,tarix,"tarix,foto",38.88675,65.80959,4.6,30,0,"XVI asrda qurilgan g'isht ko'prik: uzunligi 122 m, eni 8,2 m. O'rta Osiyodagi eng katta qadimiy ko'priklardan biri."
+Imom Muin an-Nasafiy majmuasi,qarshi,ziyorat,"ziyorat,tarix",38.77538,65.52951,4.7,45,0,"XIV asr majmuasi: masjid, xonaqoh va maqbara. Moturidiya ta'limotining yirik olimi Abu Muin an-Nasafiy (1047–1115) xotirasiga. Qarshi tumani, Kovchin."
+Gilon qishlog'i,shahrisabz,tabiat,"etno,eko,tabiat,gastro,foto",39.07904,67.45589,4.7,300,0,"Dengiz sathidan 2336 m balandlikdagi tog' qishlog'i, Shahrisabzdan 87 km. Etno va gastronomik turizm; yaqinida ""Turku Tuyg'un"", ""Novshur"", ""Kunko'rmas"" daralari."
+Suvtushar sharsharasi,shahrisabz,tabiat,"eko,tabiat,foto,ekstrim",38.95037,67.34079,4.8,240,0,"1900 m balandlikdagi Suvtushar qishlog'ida 80 metrli sharshara; atrofda zarang, shumtol, bodom va nok daraxtlari. Ekoturizm."
+Siypantosh qoyatosh rasmlari,chiroqchi,tarix,"tarix,arxeologiya,ekstrim",39.35176,66.71303,4.5,180,0,Hisor tizmasidagi Quruqsoy qishlog'i yaqinidagi so'nggi paleolit davri qoyatosh rasmlari – Markaziy Osiyodagi eng qadimiy rangli tasvirlardan.
+Jeynov qishlog'i (arablar),mirishkor,tarix,"etno,tarix",38.93031,65.27138,4.4,90,0,"Mirishkor tumanidagi qishloq: aholining 80% i VI asrda ko'chib kelgan arablar avlodi, ba'zilari hali ham qadimiy arab shevasida gaplashadi. Etnoturizm."
+Varganza qishlog'i (anor),kitob,tabiat,"agro,etno,tabiat,gastro",39.20834,67.00281,4.6,120,0,Kitob tumanidagi shirin anorlari bilan mashhur qishloq; 2019 yildan agroturizm qishlog'i. Eng yaxshi vaqt – sentyabr–oktyabr.
+Pachkamar suv ombori,guzor,tabiat,"eko,tabiat,dam",38.53589,66.39191,4.4,120,0,"G'uzor daryosidagi 1968 yilda qurilgan yirik suv ombori, tuman markazidan 15 km yuqorida."
+Xo'ja Ipok ota ziyoratgohi,dehqonobod,ziyorat,"ziyorat,shifo,tabiat",38.03903,66.38922,4.6,120,0,"XI asr maqbarasi va shifobaxsh sho'r ko'l, sho'r loy – shamollash, teri va bo'g'im kasalliklariga foydali. Turkmaniston chegarasi yaqinida. Tibbiy turizm."
+Yahudiylar qabristoni,shahrisabz,ziyorat,"ziyorat,tarix",39.05499,66.81418,4.3,30,0,"XV–XVI asrlardan beri mavjud qabriston, 2000 ga yaqin qabr va kichik muzey. Har yili Isroil, AQSh va Yevropadan ziyoratchilar keladi."
+Qatag'on qurbonlari xotirasi muzeyi,qarshi,tarix,"muzey,tarix,dam",38.86786,65.79999,4.3,45,0,"Vatanparvarlar bog'idagi muzey (2018): Ikkinchi jahon urushi davri harbiy kiyimlari, qurollari va shaxsiy buyumlar."
+Jahongir Mirzo maqbarasi,shahrisabz,ziyorat,"ziyorat,tarix,unesco",39.04989,66.82985,4.7,20,0,Amir Temurning to'ng'ich o'g'li Jahongir (1376 yilda vafot etgan) maqbarasi – Dorus-Saodat majmuasining saqlanib qolgan qismi.
+Hazrati Imom masjidi,shahrisabz,ziyorat,"ziyorat,tarix",39.0501,66.82977,4.6,20,0,Dorus-Saodat majmuasi hududidagi faol masjid.
+Gumbazi Sayyidon maqbarasi,shahrisabz,ziyorat,"ziyorat,tarix,unesco",39.04948,66.82766,4.5,15,0,"Dorut-Tilovat majmuasidagi maqbara, Mirzo Ulug'bek davrida sayyidlar uchun qurilgan."
+Koba karvonsaroyi,shahrisabz,tarix,tarix,39.0551,66.82775,4.2,15,0,Shahrisabz tarixiy markazidagi qadimiy karvonsaroy – madrasa binosi.
+Abdushukur Og'aliq masjidi,shahrisabz,ziyorat,"ziyorat,tarix",39.05535,66.82716,4.2,15,0,Tarixiy markazdagi masjid-madrasa binosi.
+Tezob ota majmuasi,yakkabog,ziyorat,"ziyorat,tarix",39.03868,66.67556,4.4,30,0,Tezob ota masjidi va maqbarasidan iborat ziyoratgoh.

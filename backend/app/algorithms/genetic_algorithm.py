@@ -1,12 +1,15 @@
 import random
+from itertools import permutations
 
 def genetic_tsp(dm, pop=80, gens=200, mut=0.25, seed=42):
     """Genetik algoritm (TSP): 0-indeks boshlang'ich nuqta, qolganlari tartibi optimallanadi."""
     n = len(dm)
-    if n <= 3:
+    if n <= 2:
         return list(range(n))
     rnd = random.Random(seed)
     cost = lambda r: sum(dm[r[i]][r[i + 1]] for i in range(n - 1))
+    if n <= 8:  # kam joy: barcha tartiblarni tekshirib aniq eng yaxshisini olamiz
+        return min(([0] + list(p) for p in permutations(range(1, n))), key=cost)
 
     def rand():
         r = list(range(1, n)); rnd.shuffle(r); return [0] + r
