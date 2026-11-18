@@ -1,0 +1,442 @@
+[
+ {
+  "name": "\"Color Super Konika\" XK",
+  "city": "shahrisabz",
+  "address": "Shahrisabz shahar, M.Abduraxmonov ko'chasi, 49 uy",
+  "phones": [
+   "+998977999000"
+  ],
+  "web": "",
+  "email": "medtour.servise@gmail.com",
+  "inbound": true,
+  "domestic": false,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"KESH EURO KOMPLEKT\" MChJ",
+  "city": "shahrisabz",
+  "address": "Shahrisabz shahar, Tutzor MFY, Madaniyat ko'chasi, 99-uy",
+  "phones": [
+   "+998973803031"
+  ],
+  "web": "https://keshtourist.uz/",
+  "email": "kesheurokomplekt@mail.ru",
+  "inbound": false,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"KMAMIRTOUR\" MChJ",
+  "city": "shahrisabz",
+  "address": "Qashqadaryo viloyati, Shahrisabz shahar, Ziyokor MFY, Archazor ko'chasi 90-uy",
+  "phones": [
+   "+998981410209"
+  ],
+  "web": "http://amir-tour.uz/",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"Kesh Rubin Tur\" MChJ",
+  "city": "shahrisabz",
+  "address": "Shahrisabz shahar, Kapkon ko'chasi, 45 uy",
+  "phones": [
+   "+998939301111"
+  ],
+  "web": "",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Miraki Sanatoriya\" MChJ",
+  "city": "shahrisabz",
+  "address": "Shahrisabz tumani, Miraki qo'rg'oni, Navoiy ko'chasi",
+  "phones": [
+   "+998755233476",
+   "+998900092704"
+  ],
+  "web": "",
+  "email": "sanatoriy_miraki@mail.ru",
+  "inbound": false,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Shahrisabz Tour & Travel\" MChJ",
+  "city": "shahrisabz",
+  "address": "Shahrisabz shahar, I.Yo'li ko'chasi, 26 uy",
+  "phones": [
+   "+998912266741"
+  ],
+  "web": "https://www.shakrisabztravel.uz",
+  "email": "shakhrisabz_tour@mail.ru",
+  "inbound": true,
+  "domestic": false,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Shahrisabz Tour\" MChJ",
+  "city": "shahrisabz",
+  "address": "Shahrisabz shahar, I.Yo'li ko'chasi, 2 uy",
+  "phones": [
+   "+998755226555",
+   "+998914677782"
+  ],
+  "web": "",
+  "email": "yulduz1967@mail.ru",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"ALBAHR TOUR\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, Mustaqillik MFY, Islom Karimov ko'chasi, 10M-uy",
+  "phones": [
+   "+998770700980"
+  ],
+  "web": "https://albahrtour.uz",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"BESHKENT TRAVEL\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi tumani, Beshkent shahari, A.Temur ko'chasi 32",
+  "phones": [
+   "+998972225025"
+  ],
+  "web": "https://beshkenttravel.uz",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"Business Technology Consulting\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, Ustozlar ko'chasi, 3/2 uy",
+  "phones": [
+   "+998935257776"
+  ],
+  "web": "",
+  "email": "sukhrobk@mail.ru",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Farovon Tibbiyot\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, O'zbekiston ko'chasi, 474 uy",
+  "phones": [
+   "+998979139109"
+  ],
+  "web": "",
+  "email": "farovontibbiyot.uz@gmail.com",
+  "inbound": true,
+  "domestic": false,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"GLOBAL- STAR- TOUR\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, Mustaqillik MFY, Islom Karimov ko'chasi 216-uy, 14-xonadon",
+  "phones": [
+   "+998996626268"
+  ],
+  "web": "https://globalstartour.uz",
+  "email": "",
+  "inbound": false,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Grand Star AAA\" XK",
+  "city": "qarshi",
+  "address": "Qarshi shahar, Bunyodkorlik ko'chasi, 5А uy",
+  "phones": [
+   "+998787710090",
+   "+998902898888"
+  ],
+  "web": "",
+  "email": "grand_star_travel@mail.ru",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"IXLOS-TRAVEL 11\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahri, Gungon MFY, Xonobod yo'li ko'chasi, 8-uy",
+  "phones": [
+   "+998912132992"
+  ],
+  "web": "",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"KARVON TRAVEL\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, Oqtepa MFY I.Karimov ko'chasi, 44b-uy",
+  "phones": [
+   "+998906684545"
+  ],
+  "web": "https://karvontravel.uz",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Konstanta Kompleks Servis\" XK",
+  "city": "qarshi",
+  "address": "Qarshi shahar, I.Karimov ko'chasi, 216 uy",
+  "phones": [
+   "+998752213003",
+   "+998914623003"
+  ],
+  "web": "",
+  "email": "city-tour@mail.ru",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"MAX NEW TOUR\" MChJ",
+  "city": "qarshi",
+  "address": "Qashqadaryo viloyati, Qarshi shahar, Kat MFY, Obod vatan ko'chasi 1/3A-uy",
+  "phones": [
+   "+998901872366"
+  ],
+  "web": "https://maxnewtour.uz/",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"NASAF TRAVEL\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, O'zbekiston ko'chasi, 245 uy",
+  "phones": [
+   "+998752250665",
+   "+998919461677"
+  ],
+  "web": "",
+  "email": "nasaf-tr64@mail.ru",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"NEW TOUR 7070\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahri, Mustaqillik MFY, Islom Karimov ko'chasi, 212-uy, 12H-xonadon",
+  "phones": [
+   "+998910257070"
+  ],
+  "web": "https://mandarintour-qarshi.uz",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"Sanduvoch Parvozi\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, 1-mitti tuman, 27/26 uy",
+  "phones": [
+   "+998752251248",
+   "+998903415577"
+  ],
+  "web": "",
+  "email": "sanduvochtravel@mail.ru",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Semurg Tourism Agency\" MChJ",
+  "city": "qarshi",
+  "address": "Qashqadaryo viloyati, Qarshi shahar, Xaramjuy MFY, Tinchlik ko'chasi 7-uy",
+  "phones": [
+   "+998886788088"
+  ],
+  "web": "https://www.semurgtour.uz",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"Sharofiddin Nurullo\" MChJ",
+  "city": "qarshi",
+  "address": "Қарши туман, Ҳамза кўчаси, 3 уй",
+  "phones": [
+   "+998906669555",
+   "+998906666400"
+  ],
+  "web": "",
+  "email": "rakhmanovaferuza@mail.ru",
+  "inbound": false,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Summer Tours\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, I.Karimov ko'chasi, 212 uy",
+  "phones": [
+   "+998995000030"
+  ],
+  "web": "https://www.world.uz",
+  "email": "karshi@world.uz",
+  "inbound": true,
+  "domestic": false,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"TRAVEL AR-TOUR GROUP\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahri, Shurtan MFY, 7-mitti tuman, 2-uy",
+  "phones": [
+   "+998972222642"
+  ],
+  "web": "https://www.artour.travel.uz",
+  "email": "artour.travel@inbox.ru",
+  "inbound": false,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"TRIP YOUR DREAMS\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, Yangi turmush MFY, Xonobod ko'chasi 23-uy",
+  "phones": [
+   "+998974240805"
+  ],
+  "web": "https://tripyourdreams.uz",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"Tourist Agency\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi tumani, Quyi Beshkent MFY, Quyi Beshkent qishlog'i",
+  "phones": [
+   "+998995055483",
+   "+998975895483"
+  ],
+  "web": "https://www.touristagency.uz",
+  "email": "botir@umail.uz",
+  "inbound": true,
+  "domestic": false,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"UNEVER TRAVEL 55555\" MChJ",
+  "city": "qarshi",
+  "address": "Qarshi shahar, Samarqand MFY I.Karimov ko'chasi, 368-uy",
+  "phones": [
+   "+998908670899"
+  ],
+  "web": "https://univertravel555.uz",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"HUMANITY AND KNOWLEDGES\" MChJ",
+  "city": "chiroqchi",
+  "address": "Qashqadaryo viloyati, Chiroqchi tumani, Pakandi MFY, Pakandi ko'chasi 6-uy",
+  "phones": [
+   "+998908822140"
+  ],
+  "web": "",
+  "email": "",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turagent"
+ },
+ {
+  "name": "\"Interesting travel\" MChJ",
+  "city": "mirishkor",
+  "address": "Mirishkor tumani, Yangi Mirishkor shaharchasi",
+  "phones": [
+   "+998936030099"
+  ],
+  "web": "",
+  "email": "interesting_travel@mail.ru",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Kamolbek Invest\" MChJ",
+  "city": "muborak",
+  "address": "Muborak tumani, Sanoat zonasi",
+  "phones": [
+   "+998972900100",
+   "+998939034474"
+  ],
+  "web": "",
+  "email": "",
+  "inbound": false,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Kitob Sayyoh\" XK",
+  "city": "kitob",
+  "address": "Kitob tumani, Kifti-ob ko'chasi, 20 uy",
+  "phones": [
+   "+998755425709",
+   "+998912149075"
+  ],
+  "web": "",
+  "email": "kitob.sayohat@gmail.com",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Sunbula Luxe Tourism\" MChJ",
+  "city": "guzor",
+  "address": "G'uzor tumani, O'zbekiston ko'chasi, 2 uy",
+  "phones": [
+   "+998755523535",
+   "+998912639900"
+  ],
+  "web": "",
+  "email": "sunbulaluxetourism@mail.ru",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ },
+ {
+  "name": "\"Ulkan Yumas\" MChJ",
+  "city": "chiroqchi",
+  "address": "Chiroqchi tumani, Xumo MFY, Rayonobod qishlog'i",
+  "phones": [
+   "+998977087539"
+  ],
+  "web": "",
+  "email": "ulkanyumas2016@gmail.com",
+  "inbound": true,
+  "domestic": true,
+  "kind": "Turoperator"
+ }
+]

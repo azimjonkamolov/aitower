@@ -27,6 +27,8 @@ class Assistant {
     'food': ['taom', 'oshxona', 'milliy taom', 'nima yeyish', 'tandir', 'jiz', 'somsa', 'shorva', 'yaxna', 'gilvindi', 'cuisine', 'dish', 'what to eat', 'local food', 'кухня', 'блюд', 'что поесть', 'тандыр', 'самс', 'шурп'],
     'transport': ['poyezd', 'poezd', 'avtobus', 'qanday bor', 'qanday yet', 'toshkentdan', 'transport', 'train', 'bus', 'how to get', 'get there', 'from tashkent', 'поезд', 'автобус', 'как добраться', 'из ташкента', 'такси до'],
     'festival': ['festival', 'bayram', 'forum', 'tadbir', 'event', 'фестивал', 'праздник', 'форум'],
+    'police': ['politsiya', 'militsiya', 'police', 'полиц', 'милиц', 'xavfsiz', 'safety', 'безопасн'],
+    'guide': ['gid', 'ekskursovod', 'yo\'lboshchi', 'yolboshchi', 'turoperator', 'turagent', 'guide', 'tour operator', 'travel agency', 'гид', 'экскурсовод', 'туроператор', 'турагент'],
     'hello': ['salom', 'assalom', 'hello', 'hi ', 'hey', 'привет', 'здравств'],
   };
 
@@ -94,6 +96,9 @@ class Assistant {
   String answer(String question) {
     final lang = Lang.current.value;
     final q = ' ${norm(question)} ';
+    // Gid va turistik politsiya savollari boshqa niyatlardan oldin tekshiriladi ("Qayerda gid bor?")
+    if (_intents['guide']!.any(q.contains)) return tr('as_guide');
+    if (_intents['police']!.any(q.contains)) return tr('as_police');
     final intent = _find(_intents, q);
     final cat = _find(_categories, q);
     final city = _find(_cities, q);
@@ -123,7 +128,7 @@ class Assistant {
     // "Qanday milliy taomlar bor?" -> taomlar haqida; "restoran bormi?" -> restoranlar ro'yxati
     final wantsPlace = ['restoran', 'restaurant', 'ресторан', 'kafe', 'cafe', 'кафе', 'choyxona', 'чайхан'].any(q.contains);
     if (intent == 'food' && place == null && !wantsPlace) return tr('as_food');
-    if (intent == 'transport' || intent == 'festival') return tr('as_$intent');
+    if (intent == 'transport' || intent == 'festival' || intent == 'police' || intent == 'guide') return tr('as_$intent');
     var pool = places.where((a) => (cat == null || a.category == cat) && (city == null || a.city == city)).toList();
     if (q.contains('ochiq') || q.contains('open now') || q.contains('открыт')) {
       pool = pool.where((a) => a.isOpenAt(DateTime.now())).toList();

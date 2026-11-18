@@ -3,3 +3,7 @@ __pycache__/
 *.db
 .venv/
 .DS_Store
+
+# Ruxsati olinmagan (demo) rasmlar — GitHubga yuklanmaydi
+mobile/assets/photos_local/*
+!mobile/assets/photos_local/.gitkeep

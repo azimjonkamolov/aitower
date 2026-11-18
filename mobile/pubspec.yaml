@@ -26,8 +26,10 @@ flutter:
     - assets/logo.png
     - assets/stops.json
     - assets/tours.json
+    - assets/guides.json
     - assets/photos.json
     - assets/photos/
+    - assets/photos_local/
 
 flutter_launcher_icons:
   android: true

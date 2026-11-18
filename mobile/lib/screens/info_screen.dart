@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../l10n/strings.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'guides_screen.dart';
 
 /// "Foydali ma'lumot": favqulodda raqamlar, transport, pul, xavfsizlik, kiyinish, mavsum, iboralar.
 class InfoScreen extends StatelessWidget {
@@ -68,6 +69,44 @@ class InfoScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
+        Card(
+          color: const Color(0xFFEFF6FF),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16), side: const BorderSide(color: Color(0xFFBFDBFE))),
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Row(children: [
+                const Icon(Icons.local_police, color: Color(0xFF1D4ED8)),
+                const SizedBox(width: 8),
+                Expanded(child: Text(tr('tpolice_title'), style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF1D4ED8)))),
+                FilledButton.icon(
+                  style: FilledButton.styleFrom(
+                      backgroundColor: const Color(0xFF1D4ED8), foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(horizontal: 14)),
+                  onPressed: () => launchUrl(Uri.parse('tel:1173')),
+                  icon: const Icon(Icons.call, size: 16),
+                  label: const Text('1173', style: TextStyle(fontWeight: FontWeight.w800)),
+                ),
+              ]),
+              const SizedBox(height: 8),
+              Text(tr('tpolice_text'), style: const TextStyle(height: 1.4)),
+            ]),
+          ),
+        ),
+        const SizedBox(height: 10),
+        Card(
+          child: ListTile(
+            leading: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(color: AppColors.amber50, borderRadius: BorderRadius.circular(10)),
+              child: const Icon(Icons.map_outlined, color: AppColors.amber600),
+            ),
+            title: Text(tr('guides_title'), style: const TextStyle(fontWeight: FontWeight.w700)),
+            subtitle: Text(tr('guides_short'), style: const TextStyle(fontSize: 12)),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const GuidesScreen())),
+          ),
+        ),
+        const SizedBox(height: 10),
         for (final s in _sections)
           Padding(
             padding: const EdgeInsets.only(bottom: 10),

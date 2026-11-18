@@ -22,6 +22,10 @@ class DataService {
       byId.remove(id);
     }
     final photos = Map<String, dynamic>.from(jsonDecode(await rootBundle.loadString('assets/photos.json')));
+    // Demo rasmlar (faqat shu kompyuterda, GitHubga yuklanmaydi): bo'lsa ustidan qo'shiladi
+    try {
+      photos.addAll(Map<String, dynamic>.from(jsonDecode(await rootBundle.loadString('assets/photos_local/photos.json'))));
+    } catch (_) {}
     final list = byId.values.map(Attraction.fromJson).toList()..sort((a, b) => a.id.compareTo(b.id));
     for (final a in list) {
       final p = photos['${a.id}'];

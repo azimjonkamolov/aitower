@@ -18,6 +18,7 @@ class PlaceImage extends StatelessWidget {
       child: Center(child: Icon(s.icon, size: 44, color: s.fg.withValues(alpha: 0.55))),
     );
     if (a.image == null) return fallback;
-    return Image.asset('assets/photos/${a.image}', fit: fit, errorBuilder: (_, __, ___) => fallback);
+    final path = a.image!.contains('/') ? 'assets/${a.image}' : 'assets/photos/${a.image}';
+    return Image.asset(path, fit: fit, errorBuilder: (_, __, ___) => fallback);
   }
 }

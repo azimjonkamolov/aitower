@@ -58,6 +58,11 @@ void main() {
       expect(plan.days.length, lessThanOrEqualTo(t['days'] as int), reason: '${t['id']} needs ${plan.days.length} days');
     }
   });
+  test('tourist police and guide questions', () {
+    expect(bot.answer('Turistik politsiya raqami qanday?'), contains('1173'));
+    expect(bot.answer('Shahrisabzda gid qayerda topsam bo\'ladi?'), contains('Shahrisabz Tour'));
+    expect(bot.answer('I need a guide'), contains('KMAMIRTOUR'));
+  });
   test('Odina is closed on Monday so it moves to another day', () {
     final odina = places.firstWhere((p) => p.id == 9);
     final plan = planRoute([odina], RouteOptions(start: DateTime(2026, 11, 9, 9))); // 9 Nov 2026 = Monday
