@@ -11,6 +11,7 @@ import '../widgets/place_card.dart';
 import '../widgets/place_image.dart';
 import '../widgets/tour_card.dart';
 import 'info_screen.dart';
+import '../widgets/location_picker.dart';
 
 /// "Kashf qilish": qahramon banner, qidiruv, toifa filtrlari va obyekt kartalari.
 class ExploreScreen extends StatefulWidget {
@@ -105,6 +106,24 @@ class _ExploreScreenState extends State<ExploreScreen> {
           ),
         ),
         const SizedBox(height: 16),
+        if (AppState.position.value == null)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Card(
+              color: const Color(0xFFEFF6FF),
+              child: ListTile(
+                leading: const Icon(Icons.location_off_outlined, color: Color(0xFF2563EB)),
+                title: Text(tr('no_location'), style: const TextStyle(fontWeight: FontWeight.w700)),
+                subtitle: Text(tr('no_location_sub'), style: const TextStyle(fontSize: 12)),
+                trailing: FilledButton(
+                  style: FilledButton.styleFrom(
+                      backgroundColor: const Color(0xFF3B82F6), foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(horizontal: 12)),
+                  onPressed: () => pickLocation(context),
+                  child: Text(tr('choose')),
+                ),
+              ),
+            ),
+          ),
         TextField(
           decoration: InputDecoration(prefixIcon: const Icon(Icons.search), hintText: tr('search')),
           onChanged: (v) => setState(() => query = v),

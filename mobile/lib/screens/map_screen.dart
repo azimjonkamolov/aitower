@@ -8,6 +8,7 @@ import '../services/data_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/osm.dart';
+import '../widgets/location_picker.dart';
 import 'detail_screen.dart';
 
 /// "Xarita": barcha obyektlar toifa ranglarida + turistning joylashuvi.
@@ -97,7 +98,8 @@ class _MapScreenState extends State<MapScreen> {
             heroTag: 'locate',
             backgroundColor: Colors.white,
             onPressed: () async {
-              if (await AppState.locate()) map.move(AppState.position.value!, 13);
+              if (!await AppState.locate() && context.mounted) await pickLocation(context);
+              if (AppState.position.value != null) map.move(AppState.position.value!, 13);
             },
             child: const Icon(Icons.my_location, color: AppColors.stone900),
           ),

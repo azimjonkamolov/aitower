@@ -7,6 +7,13 @@ class AppState {
   static final selected = ValueNotifier<Set<int>>({});
   static final position = ValueNotifier<LatLng?>(null);
   static final tab = ValueNotifier<int>(0);
+  /// Qo'lda tanlangan joy nomi (masalan "Shahrisabz"); GPS bo'lsa null.
+  static final manualLabel = ValueNotifier<String?>(null);
+
+  static void setManual(LatLng p, String label) {
+    manualLabel.value = label;
+    position.value = p;
+  }
 
   static void toggle(int id) {
     final s = {...selected.value};
@@ -16,7 +23,10 @@ class AppState {
 
   static Future<bool> locate() async {
     final p = await DataService().currentPosition();
-    if (p != null) position.value = LatLng(p.latitude, p.longitude);
+    if (p != null) {
+      manualLabel.value = null;
+      position.value = LatLng(p.latitude, p.longitude);
+    }
     return p != null;
   }
 }

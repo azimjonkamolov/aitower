@@ -9,6 +9,7 @@ import '../services/data_service.dart';
 import '../services/local_store.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/location_picker.dart';
 import 'route_result_screen.dart';
 import '../models/tour.dart';
 import '../widgets/tour_card.dart';
@@ -111,7 +112,9 @@ class _RouteSetupScreenState extends State<RouteSetupScreen> {
                     Expanded(
                         child: Text(me == null
                             ? tr('locate_hint')
-                            : '${tr('located')}: ${me.latitude.toStringAsFixed(4)}, ${me.longitude.toStringAsFixed(4)}')),
+                            : AppState.manualLabel.value != null
+                                ? '${tr('start_from')}: ${AppState.manualLabel.value}'
+                                : '${tr('located')}: ${me.latitude.toStringAsFixed(4)}, ${me.longitude.toStringAsFixed(4)}')),
                     FilledButton(
                       style: FilledButton.styleFrom(
                           backgroundColor: const Color(0xFF3B82F6),
@@ -119,11 +122,9 @@ class _RouteSetupScreenState extends State<RouteSetupScreen> {
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10)),
                       onPressed: () async {
                         final ok = await AppState.locate();
-                        if (!ok && context.mounted) {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(tr('locate_failed'))));
-                        }
+                        if (!ok && context.mounted) await pickLocation(context);
                       },
-                      child: Text(tr('locate_btn')),
+                      child: Text(tr(me == null ? 'locate_btn' : 'change')),
                     ),
                   ]),
                 ),
