@@ -62,7 +62,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
   @override
   Widget build(BuildContext context) {
     final suggestions = [for (var i = 1; i <= 6; i++) tr('sugg$i')];
-    return Column(children: [
+    return maxWidth(Column(children: [
       PageHeader(icon: Icons.chat_bubble_outline, title: tr('as_title'), subtitle: tr('as_sub')),
       Expanded(
         child: Container(
@@ -118,6 +118,6 @@ class _AssistantScreenState extends State<AssistantScreen> {
           ),
         ]),
       ),
-    ]);
+    ]), 900);
   }
 }

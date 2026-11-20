@@ -30,7 +30,7 @@ class _GuidesScreenState extends State<GuidesScreen> {
     final shown = all.where((g) => city == null || g['city'] == city).toList();
     return Scaffold(
       appBar: AppBar(title: Text(tr('guides_title'))),
-      body: ListView(padding: const EdgeInsets.fromLTRB(16, 8, 16, 32), children: [
+      body: maxWidth(ListView(padding: const EdgeInsets.fromLTRB(16, 8, 16, 32), children: [
         PageHeader(icon: Icons.map_outlined, title: tr('guides_title'), subtitle: tr('guides_sub')),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -101,7 +101,7 @@ class _GuidesScreenState extends State<GuidesScreen> {
             ),
           ),
         Text(tr('guides_note'), style: const TextStyle(fontSize: 12, color: AppColors.stone500)),
-      ]),
+      ])),
     );
   }
 

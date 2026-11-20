@@ -47,7 +47,7 @@ class _DetailScreenState extends State<DetailScreen> {
     final comments = LocalStore.i.commentsOf(a.id).reversed.toList();
     return Scaffold(
       appBar: AppBar(title: Text(a.nameIn(lang))),
-      body: ListView(children: [
+      body: maxWidth(ListView(children: [
         if (a.image != null) ...[
           SizedBox(height: 240, child: Hero(tag: 'img-${a.id}', child: PlaceImage(a))),
           if (a.credit != null)
@@ -148,7 +148,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ]),
           ),
         ),
-      ]),
+      ])),
     );
   }
 }

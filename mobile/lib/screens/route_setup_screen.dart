@@ -76,7 +76,7 @@ class _RouteSetupScreenState extends State<RouteSetupScreen> {
       builder: (context, sel, _) {
         final places = all.where((a) => sel.contains(a.id)).toList();
         final lang = Lang.current.value;
-        return ListView(padding: const EdgeInsets.only(bottom: 24), children: [
+        return maxWidth(ListView(padding: const EdgeInsets.only(bottom: 24), children: [
           PageHeader(title: tr('route_title'), subtitle: tr('route_sub')),
           if (tours.isNotEmpty) ...[
             Padding(
@@ -209,7 +209,7 @@ class _RouteSetupScreenState extends State<RouteSetupScreen> {
               ),
             ]),
           ),
-        ]);
+        ]));
       },
     );
   }

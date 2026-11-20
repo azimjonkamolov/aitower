@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ai_smart_tourism/algorithms/optimizer.dart';
 import 'package:ai_smart_tourism/models/attraction.dart';
 import 'package:ai_smart_tourism/services/assistant.dart';
+import 'package:ai_smart_tourism/services/road_router.dart';
 
 List<Attraction> load() => (jsonDecode(File('assets/attractions.json').readAsStringSync()) as List)
     .map((e) => Attraction.fromJson(e))
@@ -62,6 +63,14 @@ void main() {
     expect(bot.answer('Turistik politsiya raqami qanday?'), contains('1173'));
     expect(bot.answer('Shahrisabzda gid qayerda topsam bo\'ladi?'), contains('Shahrisabz Tour'));
     expect(bot.answer('I need a guide'), contains('KMAMIRTOUR'));
+  });
+  test('polyline decoding handles negative steps', () {
+    // Google example: (38.5,-120.2), (40.7,-120.95), (43.252,-126.453)
+    final p = RoadRouter.decodePolyline('_p~iF~ps|U_ulLnnqC_mqNvxq`@');
+    expect(p.length, 3);
+    expect(p[0].latitude, closeTo(38.5, 1e-5));
+    expect(p[0].longitude, closeTo(-120.2, 1e-5));
+    expect(p[2].longitude, closeTo(-126.453, 1e-5));
   });
   test('Odina is closed on Monday so it moves to another day', () {
     final odina = places.firstWhere((p) => p.id == 9);

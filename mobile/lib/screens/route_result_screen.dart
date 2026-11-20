@@ -283,10 +283,82 @@ class _RouteResultScreenState extends State<RouteResultScreen> {
         ]
       ];
 
+
+  /// Marshrut nuqtalarini xarita o'lchamiga sig'diradigan markaz va masshtab (Web Mercator).
+  MapOptions _fitOptions(List<LatLng> pts, Size size) {
+    if (pts.length < 2 || !size.width.isFinite || !size.height.isFinite || size.width < 50 || size.height < 50) {
+      return MapOptions(initialCenter: pts.first, initialZoom: 14);
+    }
+    var s = pts.first.latitude, n = s, w = pts.first.longitude, e = w;
+    for (final p in pts) {
+      s = min(s, p.latitude);
+      n = max(n, p.latitude);
+      w = min(w, p.longitude);
+      e = max(e, p.longitude);
+    }
+    double latRad(double lat) {
+      final sn = sin(lat * pi / 180);
+      return max(min(log((1 + sn) / (1 - sn)) / 2, pi), -pi) / 2;
+    }
+
+    final latFrac = max((latRad(n) - latRad(s)) / pi, 1e-6);
+    final lngFrac = max((e - w) / 360, 1e-6);
+    double z(double px, double frac) => log(px / 256 / frac) / ln2;
+    final zoom = min(min(z(size.height - 80, latFrac), z(size.width - 80, lngFrac)), 15.0).clamp(3.0, 15.0);
+    return MapOptions(initialCenter: LatLng((s + n) / 2, (w + e) / 2), initialZoom: zoom);
+  }
+
   Widget _body(String lang) {
     final d = plan.days[min(day, plan.days.length - 1)];
     final pts = d.path.isEmpty ? [LatLng(d.stops.first.place.lat, d.stops.first.place.lon)] : d.path;
-    return ListView(padding: const EdgeInsets.only(bottom: 16), children: [
+    final map = LayoutBuilder(builder: (context, mc) {
+      final size = mc.biggest;
+      return FlutterMap(
+          key: ValueKey('$day-${plan.hashCode}-${size.width.round()}x${size.height.round()}'),
+          // Markaz va masshtab xarita o'lchamidan hisoblanadi (telefon va planshetda bir xil ishlaydi)
+          options: _fitOptions(pts, size),
+          children: [
+            osmTiles(),
+            PolylineLayer(polylines: [Polyline(points: pts, strokeWidth: 4, color: AppColors.amber600)]),
+            MarkerLayer(markers: [
+              for (final k in shownKinds)
+                for (final r in _along(d, k))
+                  Marker(
+                    point: LatLng(r.lat, r.lon),
+                    width: 24,
+                    height: 24,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: _kindColor[k], shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 2)),
+                      child: Icon(_kindIcon[k], size: 13, color: Colors.white),
+                    ),
+                  ),
+              for (var i = 0; i < d.stops.length; i++)
+                Marker(
+                  point: LatLng(d.stops[i].place.lat, d.stops[i].place.lon),
+                  width: 28,
+                  height: 28,
+                  child: CircleAvatar(
+                    backgroundColor: visited.contains(d.stops[i].place.id) ? AppColors.green : AppColors.stone900,
+                    child: visited.contains(d.stops[i].place.id)
+                        ? const Icon(Icons.check, size: 16, color: Colors.white)
+                        : Text('${i + 1}', style: const TextStyle(color: AppColors.amber400, fontSize: 12, fontWeight: FontWeight.w700)),
+                  ),
+                ),
+              if (me != null)
+                Marker(
+                    point: me!,
+                    width: 20,
+                    height: 20,
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue, shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 3)))),
+            ]),
+            osmAttribution(),
+          ],
+        );
+    });
+    final top = <Widget>[
       if (banner != null)
         Container(
           margin: const EdgeInsets.fromLTRB(16, 12, 16, 0),
@@ -337,55 +409,8 @@ class _RouteResultScreenState extends State<RouteResultScreen> {
             ),
         ]),
       ),
-      const SizedBox(height: 12),
-      SizedBox(
-        height: 260,
-        child: FlutterMap(
-          key: ValueKey('$day-${plan.hashCode}'),
-          options: pts.length > 1
-              ? MapOptions(initialCameraFit: CameraFit.coordinates(coordinates: pts, padding: const EdgeInsets.all(40), maxZoom: 15))
-              : MapOptions(initialCenter: pts.first, initialZoom: 14),
-          children: [
-            osmTiles(),
-            PolylineLayer(polylines: [Polyline(points: pts, strokeWidth: 4, color: AppColors.amber600)]),
-            MarkerLayer(markers: [
-              for (final k in shownKinds)
-                for (final r in _along(d, k))
-                  Marker(
-                    point: LatLng(r.lat, r.lon),
-                    width: 24,
-                    height: 24,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: _kindColor[k], shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 2)),
-                      child: Icon(_kindIcon[k], size: 13, color: Colors.white),
-                    ),
-                  ),
-              for (var i = 0; i < d.stops.length; i++)
-                Marker(
-                  point: LatLng(d.stops[i].place.lat, d.stops[i].place.lon),
-                  width: 28,
-                  height: 28,
-                  child: CircleAvatar(
-                    backgroundColor: visited.contains(d.stops[i].place.id) ? AppColors.green : AppColors.stone900,
-                    child: visited.contains(d.stops[i].place.id)
-                        ? const Icon(Icons.check, size: 16, color: Colors.white)
-                        : Text('${i + 1}', style: const TextStyle(color: AppColors.amber400, fontSize: 12, fontWeight: FontWeight.w700)),
-                  ),
-                ),
-              if (me != null)
-                Marker(
-                    point: me!,
-                    width: 20,
-                    height: 20,
-                    child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue, shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 3)))),
-            ]),
-            osmAttribution(),
-          ],
-        ),
-      ),
+    ];
+    final rest = <Widget>[
       for (var i = 0; i < d.stops.length; i++) _stopTile(d.stops[i], i, lang),
       for (final k in shownKinds) ..._roadsideList(d, k),
       Padding(
@@ -401,7 +426,25 @@ class _RouteResultScreenState extends State<RouteResultScreen> {
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
         child: Text(tr('how_it_works'), style: const TextStyle(fontSize: 12, color: AppColors.stone500)),
       ),
-    ]);
+    ];
+    // Planshetda: chapda katta xarita, o'ngda to'xtash joylari ro'yxati
+    return LayoutBuilder(builder: (context, c) {
+      if (c.maxWidth >= 900) {
+        return Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Expanded(child: map),
+          SizedBox(
+            width: 440,
+            child: ListView(padding: const EdgeInsets.only(bottom: 16), children: [...top, const SizedBox(height: 8), ...rest]),
+          ),
+        ]);
+      }
+      return ListView(padding: const EdgeInsets.only(bottom: 16), children: [
+        ...top,
+        const SizedBox(height: 12),
+        SizedBox(height: 260, child: map),
+        ...rest,
+      ]);
+    });
   }
 
   List<Widget> _roadsideList(DayPlan d, String k) {

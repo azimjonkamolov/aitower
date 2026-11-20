@@ -7,6 +7,7 @@ import '../services/data_service.dart';
 import '../services/local_store.dart';
 import '../theme.dart';
 import '../models/tour.dart';
+import '../widgets/common.dart';
 import '../widgets/place_card.dart';
 import '../widgets/place_image.dart';
 import '../widgets/tour_card.dart';
@@ -74,7 +75,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
         DataService.invalidate();
         await _load();
       },
-      child: ListView(padding: const EdgeInsets.fromLTRB(16, 16, 16, 24), children: [
+      child: maxWidth(ListView(padding: const EdgeInsets.fromLTRB(16, 16, 16, 24), children: [
         _hero(),
         const SizedBox(height: 16),
         if (tours.isNotEmpty) ...[
@@ -166,8 +167,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
         const SizedBox(height: 12),
         Text('${list.length} ${tr('objects')}', style: const TextStyle(color: AppColors.stone500)),
         const SizedBox(height: 8),
-        for (final a in list) Padding(padding: const EdgeInsets.only(bottom: 12), child: PlaceCard(a)),
-      ]),
+        ResponsiveGrid(children: [for (final a in list) PlaceCard(a)]),
+      ]), 1280),
     );
   }
 

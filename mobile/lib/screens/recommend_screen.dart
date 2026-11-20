@@ -60,7 +60,7 @@ class _RecommendScreenState extends State<RecommendScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(padding: const EdgeInsets.only(bottom: 24), children: [
+    return maxWidth(ListView(padding: const EdgeInsets.only(bottom: 24), children: [
       PageHeader(icon: Icons.auto_awesome, title: tr('rec_title'), subtitle: tr('rec_sub')),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -102,10 +102,9 @@ class _RecommendScreenState extends State<RecommendScreen> {
                 Text(tr('rec_empty'), textAlign: TextAlign.center, style: const TextStyle(color: AppColors.stone500)),
               ]),
             ),
+          ResponsiveGrid(children: [
           for (final a in result)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: PlaceCard(a,
+              PlaceCard(a,
                   extra: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Row(children: [
                       Text('${tr('match')}: ', style: const TextStyle(fontSize: 12, color: AppColors.stone500)),
@@ -136,7 +135,8 @@ class _RecommendScreenState extends State<RecommendScreen> {
                         ]),
                       ),
                   ])),
-            ),
+          ]),
+          const SizedBox(height: 12),
           if (result.isNotEmpty)
             SectionCard(
               child: feedback != null
@@ -159,6 +159,6 @@ class _RecommendScreenState extends State<RecommendScreen> {
             ),
         ]),
       ),
-    ]);
+    ]), 1200);
   }
 }

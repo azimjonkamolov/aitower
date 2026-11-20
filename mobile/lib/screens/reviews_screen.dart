@@ -47,7 +47,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
       appBar: AppBar(title: Text(tr('nav_reviews'))),
       floatingActionButton: FloatingActionButton.extended(
           onPressed: _new, icon: const Icon(Icons.rate_review_outlined), label: Text(tr('write_review'))),
-      body: ListView(padding: const EdgeInsets.fromLTRB(16, 8, 16, 96), children: [
+      body: maxWidth(ListView(padding: const EdgeInsets.fromLTRB(16, 8, 16, 96), children: [
         PageHeader(icon: Icons.star_border, title: tr('reviews_title'), subtitle: tr('reviews_sub')),
         Row(children: [
           Expanded(child: _kpi('${ratings.length}', tr('ratings_given'))),
@@ -77,7 +77,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                 ),
               ),
             ),
-      ]),
+      ])),
     );
   }
 

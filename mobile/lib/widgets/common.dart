@@ -141,3 +141,24 @@ class LogoTitle extends StatelessWidget {
         ]),
       ]);
 }
+
+/// Kartalarni ekran kengligiga qarab 1–4 ustunda joylaydi (telefon: 1, planshet: 2–3).
+class ResponsiveGrid extends StatelessWidget {
+  final List<Widget> children;
+  final double minItemWidth, spacing;
+  const ResponsiveGrid({super.key, required this.children, this.minItemWidth = 340, this.spacing = 12});
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(builder: (context, c) {
+        final cols = (c.maxWidth / minItemWidth).floor().clamp(1, 4);
+        final w = (c.maxWidth - spacing * (cols - 1)) / cols;
+        return Wrap(
+          spacing: spacing,
+          runSpacing: spacing,
+          children: [for (final ch in children) SizedBox(width: w, child: ch)],
+        );
+      });
+}
+
+/// Planshetda sahifa mazmunini qulay kenglikda markazga qo'yadi.
+Widget maxWidth(Widget child, [double width = 860]) =>
+    Align(alignment: Alignment.topCenter, child: ConstrainedBox(constraints: BoxConstraints(maxWidth: width), child: child));

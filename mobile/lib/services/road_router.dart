@@ -6,7 +6,7 @@ import '../algorithms/optimizer.dart';
 /// Haqiqiy yo'llar bo'yicha masofa, vaqt va yo'l chizig'i — bepul OpenStreetMap (OSRM) xizmati orqali.
 /// Internet bo'lmasa null qaytaradi va ilova taxminiy (to'g'ri chiziq + A*) hisobga qaytadi.
 class RoadRouter {
-  static const _ua = {'User-Agent': 'SmartTourismStudentApp/1.0 (uz.tourism.ai_smart_tourism)'};
+  static const _ua = {'User-Agent': 'AISmartTourism/2.2 (uz.tourism.ai_smart_tourism)'};
   static const _timeout = Duration(seconds: 10);
   static final _geomCache = <String, List<LatLng>>{};
 
@@ -61,7 +61,8 @@ class RoadRouter {
         result |= (b & 0x1f) << shift;
         shift += 5;
       } while (b >= 0x20);
-      return (result & 1) != 0 ? ~(result >> 1) : result >> 1;
+      // ~x o'rniga -x-1: web (JavaScript) versiyada ~ ishorasiz son qaytaradi va nuqtalar "uchib ketadi"
+      return (result & 1) != 0 ? -(result >> 1) - 1 : result >> 1;
     }
 
     while (i < s.length) {

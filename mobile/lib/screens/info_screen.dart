@@ -41,7 +41,7 @@ class InfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(tr('nav_info'))),
-      body: ListView(padding: const EdgeInsets.fromLTRB(16, 8, 16, 32), children: [
+      body: maxWidth(ListView(padding: const EdgeInsets.fromLTRB(16, 8, 16, 32), children: [
         PageHeader(icon: Icons.info_outline, title: tr('info_title'), subtitle: tr('info_sub')),
         Card(
           color: const Color(0xFFFEF2F2),
@@ -142,7 +142,7 @@ class InfoScreen extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(tr('info_note'), style: const TextStyle(fontSize: 12, color: AppColors.stone500)),
-      ]),
+      ])),
     );
   }
 }
